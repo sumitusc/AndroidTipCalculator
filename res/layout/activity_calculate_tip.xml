@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".CalculateTipActivity" >
+
+    <Button
+        android:id="@+id/btnSubmitTenPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="178dp"
+        android:onClick="onSubmitTenPercent"
+        android:text="@string/submit_ten_percent" />
+
+    <Button
+        android:id="@+id/btnSubmitFifteenPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnSubmitTenPercent"
+        android:layout_alignBottom="@+id/btnSubmitTenPercent"
+        android:layout_toRightOf="@+id/btnSubmitTenPercent"
+        android:onClick="onSubmitFifteenPercent"
+        android:text="@string/submit_fifteen_percent" />
+
+    <Button
+        android:id="@+id/btnSubmitTwentyPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnSubmitFifteenPercent"
+        android:layout_alignBottom="@+id/btnSubmitFifteenPercent"
+        android:layout_toRightOf="@+id/btnSubmitFifteenPercent"
+        android:onClick="onSubmitTwentyPercent"
+        android:text="@string/submit_twenty_percent" />
+
+    <EditText
+        android:id="@+id/etBillAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:ems="10"
+        android:hint="@string/bill_amount_prompt"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/tvTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/etBillAmount"
+        android:layout_marginBottom="82dp"
+        android:layout_toRightOf="@+id/btnSubmitFifteenPercent"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/lblTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvTip"
+        android:layout_alignLeft="@+id/btnSubmitFifteenPercent"
+        android:layout_alignRight="@+id/btnSubmitFifteenPercent"
+        android:text="@string/tip_result_label"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
